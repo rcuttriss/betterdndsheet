@@ -1,0 +1,58 @@
+[
+    {
+      "name": "Legplates of the Thunderlord",
+      "description": "Legplates crackling with energy, promising swift strikes in combat.",
+      "slot": "legs",
+      "armor": 100,
+      "stats": {
+        "strength": 12,
+        "agility": 10,
+        "stamina": 8
+      }
+    },
+    {
+      "name": "Legguards of the Swiftwind",
+      "description": "Leather legguards that grant agility and swiftness.",
+      "slot": "legs",
+      "armor": 40,
+      "stats": {
+        "strength": -2,
+        "agility": 15,
+        "stamina": 5
+      }
+    },
+    {
+      "name": "Greaves of the Earthshaker",
+      "description": "Greaves that resonate with the power of the earth, granting stability.",
+      "slot": "legs",
+      "armor": 90,
+      "stats": {
+        "strength": 6,
+        "agility": 5,
+        "stamina": 12
+      }
+    },
+    {
+      "name": "Leggings of the Nightblade",
+      "description": "Shadowy leggings that enhance stealth and critical strikes.",
+      "slot": "legs",
+      "armor": 70,
+      "stats": {
+        "strength": -1,
+        "agility": 12,
+        "stamina": 8
+      }
+    },
+    {
+      "name": "Legplates of the Ironbark",
+      "description": "Heavy legplates made from enchanted ironwood, providing natural resilience.",
+      "slot": "legs",
+      "armor": 110,
+      "stats": {
+        "strength": 8,
+        "agility": 4,
+        "stamina": 15
+      }
+    }
+  ]
+  

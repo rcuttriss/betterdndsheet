@@ -1,0 +1,58 @@
+[
+    {
+      "name": "Breastplate of the Crusader",
+      "description": "A shining plate that symbolizes the resolve of a valiant warrior.",
+      "slot": "chest",
+      "armor": 120,
+      "stats": {
+        "strength": 10,
+        "agility": -2,
+        "stamina": 15
+      }
+    },
+    {
+      "name": "Robes of the Archmagi",
+      "description": "Elegant robes that amplify the arcane abilities of the wearer.",
+      "slot": "chest",
+      "armor": 50,
+      "stats": {
+        "strength": -3,
+        "agility": 5,
+        "stamina": 20
+      }
+    },
+    {
+      "name": "Platemail of the High King",
+      "description": "Regal platemail worn by the noble ruler of the realm.",
+      "slot": "chest",
+      "armor": 150,
+      "stats": {
+        "strength": 12,
+        "agility": -1,
+        "stamina": 18
+      }
+    },
+    {
+      "name": "Vestments of the Shadowmaster",
+      "description": "Shadowy vestments that grant mastery over darkness and stealth.",
+      "slot": "chest",
+      "armor": 80,
+      "stats": {
+        "strength": -2,
+        "agility": 10,
+        "stamina": 12
+      }
+    },
+    {
+      "name": "Chestguard of the Drakescale",
+      "description": "Armor made from the scales of mighty drakes, offering fire resistance.",
+      "slot": "chest",
+      "armor": 100,
+      "stats": {
+        "strength": 8,
+        "agility": 6,
+        "stamina": 14
+      }
+    }
+  ]
+  

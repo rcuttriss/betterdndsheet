@@ -1,0 +1,58 @@
+[
+    {
+      "name": "Pauldrons of the Abyss",
+      "description": "Dark shoulder armor that emanates an aura of foreboding.",
+      "slot": "shoulder",
+      "armor": 60,
+      "stats": {
+        "strength": 8,
+        "agility": 5,
+        "stamina": 12
+      }
+    },
+    {
+      "name": "Spaulders of the Crusade",
+      "description": "Shoulder armor worn by champions who seek justice.",
+      "slot": "shoulder",
+      "armor": 70,
+      "stats": {
+        "strength": 12,
+        "agility": 2,
+        "stamina": 10
+      }
+    },
+    {
+      "name": "Mantle of the Wind",
+      "description": "Flowing shoulder armor that grants incredible mobility.",
+      "slot": "shoulder",
+      "armor": 55,
+      "stats": {
+        "strength": -3,
+        "agility": 12,
+        "stamina": 8
+      }
+    },
+    {
+      "name": "Shoulders of Eternal Frost",
+      "description": "Frosty shoulder armor that chills enemies with each strike.",
+      "slot": "shoulder",
+      "armor": 65,
+      "stats": {
+        "strength": 6,
+        "agility": 8,
+        "stamina": 10
+      }
+    },
+    {
+      "name": "Epaulets of the Arcane",
+      "description": "Arcane-infused epaulets that enhance magical abilities.",
+      "slot": "shoulder",
+      "armor": 50,
+      "stats": {
+        "strength": -2,
+        "agility": 3,
+        "stamina": 15
+      }
+    }
+  ]
+  

@@ -1,0 +1,58 @@
+[
+    {
+      "name": "Helm of Valor",
+      "description": "A helm forged by skilled blacksmiths, granting courage in battle.",
+      "slot": "head",
+      "armor": 80,
+      "stats": {
+        "strength": 15,
+        "agility": -5,
+        "stamina": 10
+      }
+    },
+    {
+      "name": "Crown of the Ancients",
+      "description": "An ancient crown that bestows wisdom upon the wearer.",
+      "slot": "head",
+      "armor": 60,
+      "stats": {
+        "strength": -2,
+        "agility": 8,
+        "stamina": 15
+      }
+    },
+    {
+      "name": "Visage of Shadows",
+      "description": "A sinister mask that grants mastery over the darkness.",
+      "slot": "head",
+      "armor": 70,
+      "stats": {
+        "strength": -3,
+        "agility": 12,
+        "stamina": 8
+      }
+    },
+    {
+      "name": "Helm of the Storm",
+      "description": "A helm that channels the power of lightning, granting thunderous attacks.",
+      "slot": "head",
+      "armor": 75,
+      "stats": {
+        "strength": 10,
+        "agility": 6,
+        "stamina": 12
+      }
+    },
+    {
+      "name": "Mask of Serenity",
+      "description": "A serene mask that enhances focus and control in combat.",
+      "slot": "head",
+      "armor": 55,
+      "stats": {
+        "strength": -1,
+        "agility": 10,
+        "stamina": 10
+      }
+    }
+  ]
+  
