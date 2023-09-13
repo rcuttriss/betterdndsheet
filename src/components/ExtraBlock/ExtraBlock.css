@@ -1,7 +1,7 @@
 .extra-block {
     display: flex;
-    grid-gap: 10px; /* Adjust the gap as needed */
-    width: 100cqw; /* Adjust the width as needed */
+    grid-gap: 1rem;
+    width: 100%;
     min-height: 100%; /* Adjust the height as needed */
 }
 

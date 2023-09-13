@@ -1,12 +1,31 @@
 .universal-block {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    flex: 1;
-    width: 0;
-    padding: 1rem;
-    gap: 4px;
+  position: relative;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  flex: 1;
+  width: 0;
+  gap: 4px;
+  padding: .5rem;
   }
 
-  .universal-block div {
-  }
+.universal-block div {
+  display: grid;
+  grid-template-columns: 10% 90%;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.universal-block img {
+  width: 45px;
+  height: 45px;
+  justify-self: center;
+  align-self: center;
+  filter: invert(100%);
+}
+
+#walking {
+  transform: scaleX(-1);
+}

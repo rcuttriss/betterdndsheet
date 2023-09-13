@@ -10,3 +10,19 @@
 .skills-block th {
     text-align: start;
 }
+
+.circleHolder {
+    display: flex;
+}
+
+.profBool {
+    margin-left: 25%;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: 2px solid #fefefe;
+}
+
+.true {
+    background-color: #fefefe;
+}

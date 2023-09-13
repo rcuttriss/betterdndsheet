@@ -29,8 +29,8 @@ function App() {
           <StatBlock statType={"Charisma"} statVal={10}></StatBlock>
         </div>
         <div className="second-row">
-          <UniversalBlock></UniversalBlock>
           <SavingThrows></SavingThrows>
+          <UniversalBlock></UniversalBlock>
           <HpBlock></HpBlock>
         </div>
         <div className="third-row">
@@ -42,6 +42,12 @@ function App() {
         </div>
       </div>
       <div className="equipped">
+        <div className="tabs">
+          <div className="tab">Actions</div>
+          <div className="tab">Extra Actions</div>
+          <div className="tab"></div>
+          <div className="tab"></div>
+        </div>
         <div className="inv-slot-col">
           <InventorySlot
             slot={"head"}

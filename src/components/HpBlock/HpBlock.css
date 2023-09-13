@@ -9,7 +9,7 @@
   .change-hp-input {
     display: flex;
     flex-direction: column;
-    width: 20%;
+    width: 30%;
   }
   .hp-display {
     font-size: 2.5rem;
@@ -17,28 +17,26 @@
   .temp-hp-display {
     font-size: 2rem;
   }
-  
-  .change-hp-input {
-    position: relative;
-  }
   .change-hp-input input{
     display: block;
     text-align: center;
-    border-radius: .25rem;
     font-size: 1.5rem;
     height: 100%;
     padding: .25rem;
     background-color: #fefefe;
+    outline: 0;
+    border: 0;
   }
   #plus,#minus {
     color: #000;
     font-size: 1rem;
     padding: .25rem;
-    border-radius: .25rem;
   }
   #plus {
     background-color: lightgreen;
+    border-radius: .25rem .25rem 0 0;
   }
   #minus {
     background-color: red;
+    border-radius: 0 0 .25rem .25rem;
   }

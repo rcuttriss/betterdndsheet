@@ -25,7 +25,9 @@ button {
 .equipped {
   display: flex;
   flex-direction: column;
+  height: 100%;
   width: 50%;
+  gap: 1rem;
 }
 
 .inv-slot-col {
@@ -46,12 +48,31 @@ button {
   flex-direction: column;
   width: 50%;
   height: 100%;
-  gap: 10px;
+  gap: 12px;
 }
 
 .second-row, .third-row, .fourth-row {
+  position: relative;
   display: flex;
   height: auto;
-  color: #FFF;
-  gap: 10px;
+  color: #fefefe;
+  gap: 1rem;
+}
+
+.tabs {
+  display: flex;
+  background-color: #a9262a;
+  color: #fefefe;
+  width: 100%;
+}
+
+.tab {
+  flex: 1;
+  transition: all .15s ease-in-out;
+  height: 100%;
+  padding: 1rem;
+}
+.tab:hover {
+  background-color: #f5d073;
+  color: black;
 }
