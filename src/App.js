@@ -6,30 +6,52 @@ import shoulderGearData from "./data/shoulders.json";
 import chestGearData from "./data/chest.json";
 import legGearData from "./data/legs.json";
 import footGearData from "./data/feet.json";
+import charInfoData from "./data/charinfo.json";
 import StatBlock from "./components/StatBlock/StatBlock";
 import HpBlock from "./components/HpBlock/HpBlock";
 import UniversalBlock from "./components/UniversalBlock/UniversalBlock";
 import SkillsBlock from "./components/SkillsBlock/SkillsBlock";
-import SavingThrows from "./components/SavingThrowsBlock/SavingThrows";
+import SavingThrowsGrid from "./components/SavingThrowsBlock/SavingThrowGrid";
 import ProfAndLangBlock from "./components/ProfAndLangBlock/ProfAndLangBlock";
 import ExtraBlock from "./components/ExtraBlock/ExtraBlock";
 
 function App() {
   const [openModalSlot, setOpenModalSlot] = useState(null);
+  const [charInfo, setCharInfo] = useState(charInfoData);
 
   return (
     <div className="App">
       <div className="info-block">
         <div className="stat-block">
-          <StatBlock statType={"Strength"} statVal={20}></StatBlock>
-          <StatBlock statType={"Dexterity"} statVal={14}></StatBlock>
-          <StatBlock statType={"Constitution"} statVal={13}></StatBlock>
-          <StatBlock statType={"Intelligence"} statVal={6}></StatBlock>
-          <StatBlock statType={"Wisdom"} statVal={11}></StatBlock>
-          <StatBlock statType={"Charisma"} statVal={10}></StatBlock>
+          <StatBlock
+            statType={"Strength"}
+            statVal={charInfo.character.attributes.strength}
+          ></StatBlock>
+          <StatBlock
+            statType={"Dexterity"}
+            statVal={charInfo.character.attributes.dexterity}
+          ></StatBlock>
+          <StatBlock
+            statType={"Constitution"}
+            statVal={charInfo.character.attributes.constitution}
+          ></StatBlock>
+          <StatBlock
+            statType={"Intelligence"}
+            statVal={charInfo.character.attributes.intelligence}
+          ></StatBlock>
+          <StatBlock
+            statType={"Wisdom"}
+            statVal={charInfo.character.attributes.wisdom}
+          ></StatBlock>
+          <StatBlock
+            statType={"Charisma"}
+            statVal={charInfo.character.attributes.charisma}
+          ></StatBlock>
         </div>
         <div className="second-row">
-          <SavingThrows></SavingThrows>
+          <SavingThrowsGrid
+            attrData={charInfo.character.attributes}
+          ></SavingThrowsGrid>
           <UniversalBlock></UniversalBlock>
           <HpBlock></HpBlock>
         </div>
@@ -44,9 +66,9 @@ function App() {
       <div className="equipped">
         <div className="tabs">
           <div className="tab">Actions</div>
-          <div className="tab">Extra Actions</div>
-          <div className="tab"></div>
-          <div className="tab"></div>
+          <div className="tab">Spells</div>
+          <div className="tab">Inventory</div>
+          <div className="tab">Features and Traits</div>
         </div>
         <div className="inv-slot-col">
           <InventorySlot
