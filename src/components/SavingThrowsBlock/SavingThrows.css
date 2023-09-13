@@ -1,0 +1,19 @@
+.saving-throws-grid {
+    flex: 1;
+    width: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2x3 grid */
+    gap: 10px; /* Gap between grid items */
+  }
+  
+  .saving-throw {
+    background-color: grey;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: .25rem;
+  }
+
+  .saving-throw-header {
+    grid-column: span 2;
+  }

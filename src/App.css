@@ -1,18 +1,57 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  outline: none;
+  border: none;
+}
+
 .App {
   position: relative;
   text-align: center;
-  background-color: #282c34;
-  min-height: 100vh;
-  min-width: 100vw;
+  background-color: #121315;
+  height: 100vh;
+  width: 100vw;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 2rem;
+  gap: 2rem;
 }
 
-.inv-slot-row {
+.equipped {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.inv-slot-col {
   display: flex;
   flex-direction: column;
   gap: 5px;
   height: 100%; /* Ensure the parent's height is set properly */
+}
+
+.inv-slot-row {
+  display: flex;
+  gap: 5px;
+  align-self: center;
+}
+
+.info-block {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+  gap: 10px;
+}
+
+.second-row, .third-row, .fourth-row {
+  display: flex;
+  height: auto;
+  color: #FFF;
+  gap: 10px;
 }
