@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/dndhelper/static/css/main.89c779a9.css",
+    "main.css": "/dndhelper/static/css/main.5e06b5a7.css",
     "main.js": "/dndhelper/static/js/main.9fb52115.js",
     "static/media/medal.png": "/dndhelper/static/media/medal.7462c3e55b820c22b4bc.png",
     "static/media/magic-boot.png": "/dndhelper/static/media/magic-boot.eb4a4e7ad26f00d1da04.png",
     "static/media/speed.png": "/dndhelper/static/media/speed.d3889f9602e4edb1d7a8.png",
     "static/media/shield.png": "/dndhelper/static/media/shield.db843e0b97241332028f.png",
     "index.html": "/dndhelper/index.html",
-    "main.89c779a9.css.map": "/dndhelper/static/css/main.89c779a9.css.map",
+    "main.5e06b5a7.css.map": "/dndhelper/static/css/main.5e06b5a7.css.map",
     "main.9fb52115.js.map": "/dndhelper/static/js/main.9fb52115.js.map"
   },
   "entrypoints": [
-    "static/css/main.89c779a9.css",
+    "static/css/main.5e06b5a7.css",
     "static/js/main.9fb52115.js"
   ]
 }
