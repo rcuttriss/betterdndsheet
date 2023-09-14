@@ -1,5 +1,5 @@
 import "./InventorySlot.css";
-import InventorySlotModal from "./InventorySlotModal.js";
+import InventorySlotModal from "./InventorySlotModal.jsx";
 
 const InventorySlot = ({ slot, openModalSlot, setOpenModalSlot, gearData }) => {
   const openWindow = () => {

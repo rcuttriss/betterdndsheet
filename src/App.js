@@ -1,11 +1,5 @@
 import React, { useState } from "react";
 import "./App.css";
-import InventorySlot from "./components/InventorySlot/InventorySlot";
-import headGearData from "./data/head.json";
-import shoulderGearData from "./data/shoulders.json";
-import chestGearData from "./data/chest.json";
-import legGearData from "./data/legs.json";
-import footGearData from "./data/feet.json";
 import charInfoData from "./data/charinfo.json";
 import StatBlock from "./components/StatBlock/StatBlock";
 import HpBlock from "./components/HpBlock/HpBlock";
@@ -14,9 +8,12 @@ import SkillsBlock from "./components/SkillsBlock/SkillsBlock";
 import SavingThrowsGrid from "./components/SavingThrowsBlock/SavingThrowGrid";
 import ProfAndLangBlock from "./components/ProfAndLangBlock/ProfAndLangBlock";
 import ExtraBlock from "./components/ExtraBlock/ExtraBlock";
+import InventoryPane from "./components/InventoryPane/InventoryPane";
+import ActionsPane from "./components/ActionsPane/ActionsPane";
+import SpellsPane from "./components/SpellsPane/SpellsPane";
 
 function App() {
-  const [openModalSlot, setOpenModalSlot] = useState(null);
+  const [activePane, setActivePane] = useState(0);
   const [charInfo, setCharInfo] = useState(charInfoData);
 
   return (
@@ -65,62 +62,24 @@ function App() {
       </div>
       <div className="equipped">
         <div className="tabs">
-          <div className="tab">Actions</div>
-          <div className="tab">Spells</div>
-          <div className="tab">Inventory</div>
-          <div className="tab">Features and Traits</div>
+          <div className="tab" onClick={() => setActivePane(0)}>
+            Actions
+          </div>
+          <div className="tab" onClick={() => setActivePane(1)}>
+            Spells
+          </div>
+          <div className="tab" onClick={() => setActivePane(2)}>
+            Inventory
+          </div>
+          <div className="tab" onClick={() => setActivePane(3)}>
+            Features and Traits
+          </div>
         </div>
-        <div className="inv-slot-col">
-          <InventorySlot
-            slot={"head"}
-            openModalSlot={openModalSlot}
-            setOpenModalSlot={setOpenModalSlot}
-            gearData={headGearData}
-          />
-          <InventorySlot
-            slot={"neck"}
-            openModalSlot={openModalSlot}
-            setOpenModalSlot={setOpenModalSlot}
-            gearData={shoulderGearData}
-          />
-          <InventorySlot
-            slot={"chest"}
-            openModalSlot={openModalSlot}
-            setOpenModalSlot={setOpenModalSlot}
-            gearData={chestGearData}
-          />
-          <InventorySlot
-            slot={"gloves"}
-            openModalSlot={openModalSlot}
-            setOpenModalSlot={setOpenModalSlot}
-            gearData={headGearData}
-          />
-          <InventorySlot
-            slot={"legs"}
-            openModalSlot={openModalSlot}
-            setOpenModalSlot={setOpenModalSlot}
-            gearData={legGearData}
-          />
-          <InventorySlot
-            slot={"feet"}
-            openModalSlot={openModalSlot}
-            setOpenModalSlot={setOpenModalSlot}
-            gearData={footGearData}
-          />
-        </div>
-        <div className="inv-slot-row">
-          <InventorySlot
-            slot={"weaponMainHand"}
-            openModalSlot={openModalSlot}
-            setOpenModalSlot={setOpenModalSlot}
-            gearData={headGearData}
-          />
-          <InventorySlot
-            slot={"weaponOffHand"}
-            openModalSlot={openModalSlot}
-            setOpenModalSlot={setOpenModalSlot}
-            gearData={headGearData}
-          />
+        <div className="pane-window">
+          {activePane === 0 && <ActionsPane></ActionsPane>}
+          {activePane === 1 && <SpellsPane></SpellsPane>}
+          {activePane === 2 && <InventoryPane></InventoryPane>}
+          {activePane === 3 && <InventoryPane></InventoryPane>}
         </div>
       </div>
     </div>

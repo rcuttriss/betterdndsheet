@@ -64,6 +64,7 @@ button {
   background-color: #a9262a;
   color: #fefefe;
   width: 100%;
+  border-radius: .25rem;
 }
 
 .tab {
@@ -75,4 +76,8 @@ button {
 .tab:hover {
   background-color: #f5d073;
   color: black;
+}
+
+.pane-window {
+  height: 100%;
 }
