@@ -3,7 +3,12 @@
   padding: 0;
   margin: 0;
 }
-
+:root {
+  --primary-color: #a9262a;
+  --accent-color: #f5d073;
+  --primary-grey: #8C8A93;
+  --cute-purple: #BEB8EB;
+}
 button {
   outline: none;
   border: none;
