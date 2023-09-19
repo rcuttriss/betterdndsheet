@@ -16,7 +16,55 @@
         "acrobatics": {
           "proficient": false
         },
+        "animal handling":	{
+          "proficient": false
+        },
+        "arcana":	{
+          "proficient": false
+        },
+        "athletics":	{
+          "proficient": false
+        },
+        "deception":	{
+          "proficient": false
+        },
+        "history":	{
+          "proficient": false
+        },
+        "insight":	{
+          "proficient": false
+        },
+        "intimidation":	{
+          "proficient": false
+        },
+        "investigation":	{
+          "proficient": false
+        },
+        "medicine":	{
+          "proficient": false
+        },
+        "nature":	{
+          "proficient": false
+        },
         "perception": {
+          "proficient": true
+        },
+        "performance": {
+          "proficient": true
+        },
+        "persuasion": {
+          "proficient": true
+        },
+        "religion": {
+          "proficient": true
+        },
+        "sleight of hand": {
+          "proficient": true
+        },
+        "stealth": {
+          "proficient": true
+        },
+        "survival": {
           "proficient": true
         }
       },

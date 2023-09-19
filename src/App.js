@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
-
 // components
-import StatBlock from "./components/StatBlock/StatBlock";
+import StatBlockGrid from "./components/StatBlock/StatBlockGrid";
 import HpBlock from "./components/HpBlock/HpBlock";
 import UniversalBlock from "./components/UniversalBlock/UniversalBlock";
 import SkillsBlock from "./components/SkillsBlock/SkillsBlock";
@@ -12,29 +11,50 @@ import ExtraBlock from "./components/ExtraBlock/ExtraBlock";
 import InventoryPane from "./components/InventoryPane/InventoryPane";
 import ActionsPane from "./components/ActionsPane/ActionsPane";
 import SpellsPane from "./components/SpellsPane/SpellsPane";
-// context stuff
-import charInfoData from "./data/charinfo.json"; // TODO :: replace with firebase query
-import CharacterContext from "./context/context";
+import SignInButton from "./components/SignInButton/SignInButton";
+// character data
+import CharacterContext from "./lib/context";
+import { fetchCharFields, fetchCharAttr } from "./lib/fetchCharData";
 
 function App() {
   const [activePane, setActivePane] = useState(0);
-  const [characterData, setCharacterData] = useState(charInfoData);
+  const [characterFields, setCharacterFields] = useState(null);
+  const [characterAttr, setCharacterAttr] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        setCharacterFields(await fetchCharFields()); // Set character data as the initial state
+        setCharacterAttr(await fetchCharAttr());
+      } catch (error) {
+        console.error("Error fetching character data:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  if (!characterFields || !characterAttr) {
+    return <div>Loading...</div>; // Or any loading indicator
+  }
 
   return (
-    <CharacterContext.Provider value={{ characterData, setCharacterData }}>
+    <CharacterContext.Provider
+      value={{
+        characterFields,
+        setCharacterFields,
+        characterAttr,
+        setCharacterAttr,
+      }}
+    >
       <div className="App">
+        <SignInButton />
         <div className="info-block">
           <div className="stat-block">
-            <StatBlock statType={"Strength"}></StatBlock>
-            <StatBlock statType={"Dexterity"}></StatBlock>
-            <StatBlock statType={"Constitution"}></StatBlock>
-            <StatBlock statType={"Intelligence"}></StatBlock>
-            <StatBlock statType={"Wisdom"}></StatBlock>
-            <StatBlock statType={"Charisma"}></StatBlock>
+            <StatBlockGrid></StatBlockGrid>
           </div>
           <div className="second-row">
-            <SavingThrowsGrid
-            ></SavingThrowsGrid>
+            <SavingThrowsGrid></SavingThrowsGrid>
             <UniversalBlock></UniversalBlock>
             <HpBlock></HpBlock>
           </div>

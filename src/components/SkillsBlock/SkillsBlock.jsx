@@ -2,7 +2,7 @@ import "./SkillsBlock.css";
 
 function SkillsBlock() {
   return (
-    <table class="skills-block">
+    <table className="skills-block">
       <thead>
         <tr>
           <th>Proficiency</th>

@@ -1,22 +1,21 @@
 import "./SavingThrows.css";
 import SavingThrow from "./SavingThrow";
 import React, { useContext } from 'react';
-import CharacterContext from '../../context/context';
+import CharacterContext from '../../lib/context';
 
-function SavingThrowsGrid({ attrData }) {
-  const { characterData, setCharacterData } = useContext(CharacterContext);
-
+function SavingThrowsGrid() {
+  const { characterAttr } = useContext(CharacterContext);
+  if(characterAttr === null) {
+    return <div>loading man loading...</div>
+  } else { 
   return (
     <div className="saving-throws-grid">
       <h2 className="saving-throw-header">Saving Throws</h2>
-      <SavingThrow statType="Str" statVal={characterData.character.attributes.strength}></SavingThrow>
-      <SavingThrow statType="Dex" statVal={characterData.character.attributes.dexterity}></SavingThrow>
-      <SavingThrow statType="Con" statVal={characterData.character.attributes.constitution}></SavingThrow>
-      <SavingThrow statType="Int" statVal={characterData.character.attributes.intelligence}></SavingThrow>
-      <SavingThrow statType="Wis" statVal={characterData.character.attributes.wisdom}></SavingThrow>
-      <SavingThrow statType="Cha" statVal={characterData.character.attributes.charisma}></SavingThrow>
+      {Object.entries(characterAttr).map(([statType, statVal]) => (
+    <SavingThrow key={statType} statType={statType.substring(0,3)} statVal={statVal} />))}
     </div>
   );
+  }
 }
 
 export default SavingThrowsGrid;
