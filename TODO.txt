@@ -1,4 +1,5 @@
 @TODO
+[X] - basic firebase app
 [X] - basic google auth
 [X] - basic firestore
 [X] - basic firebase data model
@@ -6,10 +7,11 @@
 [X] - read support on saving throws
 [X] - read support on saving HpBlock
 [X] - client side health changes
-[50%] - read support on saving ExtraBlock
+[ ] - logic for Armor Class
 [X] - add support for N many attributes
 [X] - add support for N many saving throws
 [ ] - add support for N many skills
+[ ] - add proficiency for saving throws
 [ ] - finish extra block reads
 [ ] - set up firebase write on HpBlock Damage Click
 [ ] - set up writes for statblocks

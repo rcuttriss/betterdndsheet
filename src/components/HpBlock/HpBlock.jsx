@@ -23,7 +23,6 @@ function HpBlock() {
         <button id="minus" onClick={handleDamageClick}>Damage</button>
       </div>
       <div className="hp-display">{`${characterFields.currHp}/55`}</div>
-      <div className="temp-hp-display">0</div>
     </div>
   );
 }
