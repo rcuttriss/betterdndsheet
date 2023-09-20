@@ -1,4 +1,4 @@
-# Dungeons & Dragons Character Manager App
+# betterDnD (please suggest a better name)
 
 This app is a tool designed to help manage Dungeons & Dragons (D&D) character information. It provides an interface to view and manage character attributes, skills, saving throws, inventory, spells, actions, and more.
 

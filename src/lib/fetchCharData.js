@@ -1,5 +1,11 @@
 import { db } from "./firebase";
-import { doc, getDoc, collection, getDocs } from "firebase/firestore";
+import {
+  doc,
+  getDoc,
+  updateDoc,
+  collection,
+  getDocs,
+} from "firebase/firestore";
 
 const fetchCharFields = async () => {
   try {
@@ -10,10 +16,11 @@ const fetchCharFields = async () => {
       "characters",
       "WMrO6zkW6Y4eVFf5lF6i"
     );
+    console.log("Querying Character Fields...");
     const docSnapshot = await getDoc(charDocRef);
+    console.log("Success!");
 
     if (docSnapshot.exists()) {
-      //   console.log("Document data:", docSnapshot.data());
       return docSnapshot.data();
     } else {
       console.log("No such document!");
@@ -21,6 +28,24 @@ const fetchCharFields = async () => {
   } catch (error) {
     console.error("Error fetching char data:", error);
   }
+};
+
+const updateCharFields = async (changes) => {
+  const charDocRef = doc(
+    db,
+    "users",
+    "fKKVOyUGWteiKwfRqZ08DkaTLvS2",
+    "characters",
+    "WMrO6zkW6Y4eVFf5lF6i"
+  );
+  console.log("Updating Character Fields in Firestore...");
+  updateDoc(charDocRef, changes)
+    .then(() => {
+      console.log("Changes to Character Fields saved successfully!");
+    })
+    .catch((error) => {
+      console.error("Error saving changes:", error);
+    });
 };
 
 const fetchCharAttr = async () => {
@@ -33,7 +58,9 @@ const fetchCharAttr = async () => {
       "WMrO6zkW6Y4eVFf5lF6i",
       "attributes"
     );
+    console.log("Querying Character Attributes...");
     const attrSnapshot = await getDocs(charAttrRef);
+    console.log("Success!");
     let attrMap = {};
     attrSnapshot.forEach((doc) => {
       attrMap[doc.id] = doc.data()["value"];
@@ -50,4 +77,4 @@ const fetchCharAttr = async () => {
   }
 };
 
-export { fetchCharFields, fetchCharAttr };
+export { fetchCharFields, fetchCharAttr, updateCharFields };

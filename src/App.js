@@ -12,20 +12,21 @@ import InventoryPane from "./components/InventoryPane/InventoryPane";
 import ActionsPane from "./components/ActionsPane/ActionsPane";
 import SpellsPane from "./components/SpellsPane/SpellsPane";
 import SignInButton from "./components/SignInButton/SignInButton";
+import SaveButton from "./components/SaveButton/SaveButton";
+import Loader from "./components/Loader/Loader";
 // character data
 import CharacterContext from "./lib/context";
-import { fetchCharFields, fetchCharAttr } from "./lib/fetchCharData";
+import { fetchCharFields, updateCharFields } from "./lib/fetchCharData";
 
 function App() {
   const [activePane, setActivePane] = useState(0);
   const [characterFields, setCharacterFields] = useState(null);
-  const [characterAttr, setCharacterAttr] = useState(null);
+  const [changes, setChanges] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        setCharacterFields(await fetchCharFields()); // Set character data as the initial state
-        setCharacterAttr(await fetchCharAttr());
+        setCharacterFields(await fetchCharFields());
       } catch (error) {
         console.error("Error fetching character data:", error);
       }
@@ -34,8 +35,8 @@ function App() {
     fetchData();
   }, []);
 
-  if (!characterFields || !characterAttr) {
-    return <div>Loading...</div>; // Or any loading indicator
+  if (!characterFields) {
+    return <Loader></Loader>; // Or any loading indicator
   }
 
   return (
@@ -43,12 +44,14 @@ function App() {
       value={{
         characterFields,
         setCharacterFields,
-        characterAttr,
-        setCharacterAttr,
+        changes,
+        setChanges,
+        updateCharFields,
       }}
     >
       <div className="App">
         <SignInButton />
+        <SaveButton></SaveButton>
         <div className="info-block">
           <div className="stat-block">
             <StatBlockGrid></StatBlockGrid>

@@ -7,20 +7,22 @@
 [X] - read support on saving throws
 [X] - read support on saving HpBlock
 [X] - client side health changes
-[ ] - logic for Armor Class
 [X] - add support for N many attributes
 [X] - add support for N many saving throws
+[X] - set up firebase write on HpBlock Heal/Damage Click
+[X] - set up reads/writes for armor+lang block
+[X] - set up reads/writes for defense 
+[X] - set up reads/writes for conditions
+[X] - add proficiency for saving throws/skills
+[ ] - logic for Armor Class
 [ ] - add support for N many skills
-[ ] - add proficiency for saving throws
-[ ] - finish extra block reads
-[ ] - set up firebase write on HpBlock Damage Click
 [ ] - set up writes for statblocks
-[ ] - set up reads/writes for inventory
-[ ] - set up reads/writes for spells
+[ ] - set up reads for inventory
+[ ] - set up writes for inventory
+[ ] - set up reads for spells
+[ ] - set up writes for spells
 [ ] - set up reads/writes for actions??
 [ ] - set up reads/writes for features/traits
-[ ] - set up reads/writes for defense 
-[ ] - set up reads/writes for conditions
 [ ] - set up create a character
 [ ] - character level ups (all classes)
 [ ] - generic spells

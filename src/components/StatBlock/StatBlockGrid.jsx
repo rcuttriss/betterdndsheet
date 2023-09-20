@@ -4,31 +4,17 @@ import React, { useContext } from 'react';
 import CharacterContext from '../../lib/context';
 
 function StatBlockGrid() {
-  const { characterAttr } = useContext(CharacterContext);
-
-  // Define the order for the first 6 stats (conventional D&D order)
-  const orderedStats = ['strength', 'dexterity', 'constitution', 'intelligence', 'wisdom', 'charisma'];
-
-  // Sort the conventionalStats array based on the order defined in orderedStats
-  const sortedConventionalStats = orderedStats
-    .filter(statType => characterAttr.hasOwnProperty(statType))
-    .map(statType => ({ statType, statVal: characterAttr[statType] }));
-
-  // Separate the rest of the stats
-  const otherStats = Object.keys(characterAttr)
-    .filter(statType => !orderedStats.includes(statType))
-    .sort()
-    .map(statType => ({ statType, statVal: characterAttr[statType] }));
+  const { characterFields } = useContext(CharacterContext);
+  const attrArr = characterFields.attrArr;
 
   return (
     <div className="stat-block-grid">
-      {sortedConventionalStats.map(({ statType, statVal }) => (
-        <StatBlock key={statType} statType={statType} statVal={statVal} />
-      ))}
-
-      {otherStats.map(({ statType, statVal }) => (
-        <StatBlock key={statType} statType={statType} statVal={statVal} />
-      ))}
+      <StatBlock statType={"strength"} statVal={attrArr[0]}></StatBlock>
+      <StatBlock statType={"dexterity"} statVal={attrArr[1]}></StatBlock>
+      <StatBlock statType={"constitution"} statVal={attrArr[2]}></StatBlock>
+      <StatBlock statType={"intelligence"} statVal={attrArr[3]}></StatBlock>
+      <StatBlock statType={"wisdom"} statVal={attrArr[4]}></StatBlock>
+      <StatBlock statType={"charisma"} statVal={attrArr[5]}></StatBlock>
     </div>
   );
 }

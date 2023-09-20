@@ -9,8 +9,8 @@ import { useContext } from "react";
 import CharacterContext from "../../lib/context";
 
 function UniversalBlock() {
-  const { characterAttr, characterFields } = useContext(CharacterContext);
-  const initiative = Math.floor((characterAttr.dexterity-10)/2 )
+  const { characterFields } = useContext(CharacterContext);
+  const initiative = Math.floor((characterFields.attrArr[1]-10)/2 )
   const proficiencyBonuses = [2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5];
 
   function getProficiencyBonus(level) {

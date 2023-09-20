@@ -7,7 +7,7 @@
     border: 1px solid #fefefe;
 }
 
-.skills-block th {
+.skills-block .start {
     text-align: start;
 }
 
@@ -25,4 +25,16 @@
 
 .true {
     background-color: #fefefe;
+}
+.green {
+    color: lightgreen;
+  }
+  .red {
+    color: red;
+  }
+  .wheat {
+    color: wheat;
+  }
+.skillMod {
+    text-align: center;
 }
