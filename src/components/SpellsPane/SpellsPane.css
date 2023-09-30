@@ -7,33 +7,28 @@
     color: #fefefe;
     padding: 8px;
     gap: 2rem;
+    overflow-y: scroll;
 }
-.spells-list {
+.spell-level-container {
     display: flex;
     flex-direction: column;
     align-items: start;
     width: 100%;
-}
 
-.spells-option-header {
-    display: grid;
-    width: 100%;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
-
 .spell-level-header {
     color: #fefefe;
     font-size: 1.5rem;
 }
 
-.spells-flex {
+.spell-level-list {
     color: #fefefe;
     display: flex;
     width: 100%;
     flex-direction: column;
     justify-content: center;
 }
-.spells-options {
+.spell-details {
     display: grid;
     color: #fefefe;
     justify-content: center;
@@ -41,10 +36,9 @@
     padding: 8px;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
-.spells-options img {
+.spell-details img {
     justify-self: center;
-    width: 60px;
-    height: 60px;
+    width: 75%;
 }
 
 .spells-counters {
@@ -57,4 +51,8 @@
     outline: 1px solid #fefefe;
     border-radius: .25rem;
     padding: 1rem;
+}
+
+.white-svg {
+    fill: #fefefe; /* Set the fill color to white */
 }

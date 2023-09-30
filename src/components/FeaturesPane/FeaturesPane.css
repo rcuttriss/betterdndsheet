@@ -1,0 +1,31 @@
+.feature-pane {
+    display: flex;
+    flex-direction: column;
+    color: #fefefe;
+    align-items: start;
+    width: 100%;
+    height: 100%;
+    gap: 2rem;
+}
+.feature-category {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 100%;
+    gap: 1rem;
+}
+.feature-header {
+    font-size: 1.5rem;
+    font-style: italic;
+}
+.feature {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 100%;
+    gap: 6px;
+}
+.feature-name {
+    font-weight: bold;
+    font-size: 1.2rem;
+}

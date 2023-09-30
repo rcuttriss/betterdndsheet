@@ -11,6 +11,7 @@ import ExtraBlock from "./components/ExtraBlock/ExtraBlock";
 import InventoryPane from "./components/InventoryPane/InventoryPane";
 import ActionsPane from "./components/ActionsPane/ActionsPane";
 import SpellsPane from "./components/SpellsPane/SpellsPane";
+import FeaturesPane from "./components/FeaturesPane/FeaturesPane";
 import SignInButton from "./components/SignInButton/SignInButton";
 import SaveButton from "./components/SaveButton/SaveButton";
 import Loader from "./components/Loader/Loader";
@@ -90,7 +91,7 @@ function App() {
             {activePane === 0 && <ActionsPane></ActionsPane>}
             {activePane === 1 && <SpellsPane></SpellsPane>}
             {activePane === 2 && <InventoryPane></InventoryPane>}
-            {activePane === 3 && <InventoryPane></InventoryPane>}
+            {activePane === 3 && <FeaturesPane></FeaturesPane>}
           </div>
         </div>
       </div>

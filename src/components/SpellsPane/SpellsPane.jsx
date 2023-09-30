@@ -1,6 +1,5 @@
 import "./SpellsPane.css";
 import React, { useContext } from "react";
-import fireballPng from "../../assets/images/fireball.png";
 import CharacterContext from "../../lib/context";
 import Loader from "../Loader/Loader";
 import SpellsCounters from "./SpellsCounters";
@@ -34,12 +33,11 @@ const SpellsPane = () => {
         }
 
         return (
-          <div key={levelIndex}>
+          <div key={levelIndex} className="spell-level-container">
             <div className="spell-level-header">{`${levelIndex + 1}${getLevelSuffix(levelIndex + 1)} Level`}</div>
-            <div className="spells-flex">
+            <div className="spell-level-list">
               {levelSpells.map((spell, spellIndex) => (
-                <div key={spellIndex} className="spells-options">
-                  <img src={fireballPng} alt="fireball" />
+                <div key={spellIndex} className="spell-details">
                   <div>{spell.name}</div>
                   <div>{spell.castTime}</div>
                   <div>{spell.range}</div>

@@ -62,7 +62,7 @@ function SkillsBlock() {
           return (
             <tr key={skill} className={proficient ? "profSkill" : ""}> 
               <td>{skill}</td>
-              <td className="skillMod">{statType.substring(0,3).toUpperCase()}</td>
+              <td className="skillMod">{statType.substring(0,3)}</td>
               <td className={`skillMod ${colorClass}`}>
                 {modifierSign}{Math.abs(modifier)} {/* Display sign and absolute value */}
               </td>
