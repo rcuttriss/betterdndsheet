@@ -8,17 +8,6 @@
     padding: 8px;
     gap: 2rem;
 }
-.spells-counters {
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    outline: 1px solid #fefefe;
-    border-radius: .25rem;
-    padding: 1rem;
-}
 .spells-list {
     display: flex;
     flex-direction: column;
@@ -56,4 +45,16 @@
     justify-self: center;
     width: 60px;
     height: 60px;
+}
+
+.spells-counters {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    outline: 1px solid #fefefe;
+    border-radius: .25rem;
+    padding: 1rem;
 }
