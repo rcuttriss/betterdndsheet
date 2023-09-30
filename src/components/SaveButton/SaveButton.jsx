@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import CharacterContext from "../../lib/context";
 
 function SaveButton() {
-  const { characterFields, updateCharFields, changes } = useContext(CharacterContext);
+  const { updateCharFields, changes } = useContext(CharacterContext);
 
   const handleSave = () => {
     // Assuming you have the changes you want to save in your context

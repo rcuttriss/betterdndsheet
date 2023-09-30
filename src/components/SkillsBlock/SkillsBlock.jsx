@@ -44,9 +44,9 @@ function SkillsBlock() {
     <table className="skills-block">
       <thead>
         <tr>
-          <th className="start">Proficiency</th>
           <th className="start">Name</th>
           <th className="skillMod">Modifier</th>
+          <th className="skillMod">Bonus</th>
         </tr>
       </thead>
       <tbody>
@@ -60,11 +60,9 @@ function SkillsBlock() {
           const modifierSign = modifier >= 0 ? "+" : "-";
     
           return (
-            <tr key={skill}>
-              <td className="circleHolder">
-                <div className={`profBool ${profSkillsMap[skill] ? "true" : ""}`}></div>
-              </td>
+            <tr key={skill} className={proficient ? "profSkill" : ""}> 
               <td>{skill}</td>
+              <td className="skillMod">{statType.substring(0,3).toUpperCase()}</td>
               <td className={`skillMod ${colorClass}`}>
                 {modifierSign}{Math.abs(modifier)} {/* Display sign and absolute value */}
               </td>

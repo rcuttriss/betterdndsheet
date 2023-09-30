@@ -17,7 +17,7 @@ function SavingThrow({ statType, statVal }) {
   const modifierString = modifier >= 0 ? `+${modifier}` : `${modifier}`;
 
   return (
-    <div className="saving-throw">
+    <div className={`saving-throw ${proficient ? "proficient" : ""}`}>
       <span className="saving-throw-label">{statType.substring(0,3)}</span>
       <span className={`saving-throw-value ${colorClass}`}>
         {modifierString}

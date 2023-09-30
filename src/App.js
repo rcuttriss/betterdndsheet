@@ -16,17 +16,20 @@ import SaveButton from "./components/SaveButton/SaveButton";
 import Loader from "./components/Loader/Loader";
 // character data
 import CharacterContext from "./lib/context";
-import { fetchCharFields, updateCharFields } from "./lib/fetchCharData";
+import { fetchCharFields, fetchSpellData } from "./lib/fetchCharData";
 
 function App() {
-  const [activePane, setActivePane] = useState(0);
+  const [activePane, setActivePane] = useState(1);
   const [characterFields, setCharacterFields] = useState(null);
+  const [spellData, setSpellData] = useState(null);
   const [changes, setChanges] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        setCharacterFields(await fetchCharFields());
+        const tempCharFields = await fetchCharFields();
+        setCharacterFields(tempCharFields);
+        setSpellData(await fetchSpellData(tempCharFields));
       } catch (error) {
         console.error("Error fetching character data:", error);
       }
@@ -44,9 +47,8 @@ function App() {
       value={{
         characterFields,
         setCharacterFields,
-        changes,
         setChanges,
-        updateCharFields,
+        spellData,
       }}
     >
       <div className="App">

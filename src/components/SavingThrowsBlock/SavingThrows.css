@@ -24,3 +24,7 @@
   .saving-throw-label, .saving-throw-value {
     font-size: 1.5rem;
   }
+
+  .proficient {
+    border: 1px solid green;
+  }
