@@ -19,11 +19,12 @@
 [ ] - set up writes for statblocks
 [ ] - set up reads for inventory
 [ ] - set up writes for inventory
-[ ] - set up reads for spells
+[X] - set up reads for spells
 [ ] - set up writes for spells
 [ ] - set up reads/writes for actions??
 [ ] - set up reads/writes for features/traits
 [ ] - set up create a character
+[ ] - set up select a character
 [ ] - character level ups (all classes)
 [ ] - generic spells
 [ ] - generic items

@@ -11,30 +11,20 @@
     text-align: start;
 }
 
-.circleHolder {
-    display: flex;
-}
-
-.profBool {
-    margin-left: 25%;
-    height: 20px;
-    width: 20px;
-    border-radius: 50%;
-    border: 2px solid #fefefe;
-}
-
-.true {
-    background-color: #fefefe;
-}
 .green {
     color: lightgreen;
-  }
-  .red {
+}
+.red {
     color: red;
-  }
-  .wheat {
+}
+.wheat {
     color: wheat;
-  }
+}
 .skillMod {
     text-align: center;
+}
+.profSkill {
+    font-size: 104%;
+    color: green;
+    text-shadow: 1px 1px 4px darkgreen;
 }
