@@ -36,9 +36,9 @@
     padding: 8px;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
-.spell-details img {
+.spell-icon {
     justify-self: center;
-    width: 75%;
+    width: 100%;
 }
 
 .spells-counters {
@@ -51,8 +51,4 @@
     outline: 1px solid #fefefe;
     border-radius: .25rem;
     padding: 1rem;
-}
-
-.white-svg {
-    fill: #fefefe; /* Set the fill color to white */
 }
