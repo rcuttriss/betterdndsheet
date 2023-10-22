@@ -24,6 +24,7 @@ function App() {
   const [characterFields, setCharacterFields] = useState(null);
   const [spellData, setSpellData] = useState(null);
   const [changes, setChanges] = useState(null);
+  const [spellSlots, setSpellSlots] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -31,6 +32,7 @@ function App() {
         const tempCharFields = await fetchCharFields();
         setCharacterFields(tempCharFields);
         setSpellData(await fetchSpellData(tempCharFields));
+        setSpellSlots(tempCharFields.spellSlots);
       } catch (error) {
         console.error("Error fetching character data:", error);
       }
@@ -48,8 +50,11 @@ function App() {
       value={{
         characterFields,
         setCharacterFields,
+        changes,
         setChanges,
         spellData,
+        spellSlots,
+        setSpellSlots,
       }}
     >
       <div className="App">

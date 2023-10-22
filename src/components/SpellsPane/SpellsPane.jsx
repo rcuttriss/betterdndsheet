@@ -1,5 +1,5 @@
 import "./SpellsPane.css";
-import React, { useContext } from "react";
+import { useContext } from "react";
 import CharacterContext from "../../lib/context";
 import Loader from "../Loader/Loader";
 import SpellsCounters from "./SpellsCounters";
@@ -15,7 +15,7 @@ import { ReactComponent as TransmutationIcon } from '../../assets/images/transmu
 
 
 const SpellsPane = () => {
-  const { spellData } = useContext(CharacterContext);
+  const { spellData, setSpellSlots } = useContext(CharacterContext);
 
   if (!spellData) {
     return <Loader></Loader>;
@@ -44,6 +44,15 @@ const SpellsPane = () => {
     transmutation: TransmutationIcon
   };
   
+  const castSpell = (level) => {
+    setSpellSlots((prevSpellSlots) => {
+      const updatedSpellSlots = [...prevSpellSlots];
+      if(updatedSpellSlots[level-1] > 0) {
+        updatedSpellSlots[level-1] = updatedSpellSlots[level-1]-1;
+      }
+      return updatedSpellSlots;
+    });
+  };
 
   return (
     <div className="spells-pane">
@@ -65,6 +74,7 @@ const SpellsPane = () => {
                   <div>{spell.name}</div>
                   <div>{spell.castTime}</div>
                   <div>{spell.range}</div>
+                  <button onClick={() => castSpell(spell.level)} className="cast-button">CAST</button>
                 </div>
               );
             })}

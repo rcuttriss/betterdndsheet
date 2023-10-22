@@ -52,3 +52,11 @@
     border-radius: .25rem;
     padding: 1rem;
 }
+
+.cast-button {
+    background-color: green;
+    color: #fefefe;
+    border-radius: 2rem;
+    width: 4rem;
+    padding: .5rem;
+}

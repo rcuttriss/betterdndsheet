@@ -1,6 +1,8 @@
+import "./SignInButton.css"
 import { db, auth, googleAuthProvider } from "../../lib/firebase";
 import { doc, setDoc, getDoc } from "firebase/firestore";
 import { signInWithPopup } from "firebase/auth";
+import { ReactComponent as GoogleButton } from '../../assets/images/google.svg';
 
 function SignInButton() {
   const signInWithGoogle = async () => {
@@ -25,7 +27,7 @@ function SignInButton() {
   };
   return (
     <button className="btn-google" onClick={signInWithGoogle}>
-      GOOGLE
+      <GoogleButton></GoogleButton>
     </button>
   );
 }

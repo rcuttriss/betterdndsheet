@@ -1,9 +1,14 @@
-import { useState } from "react";
 import "./SpellsPane.css";
+import { useState, useContext } from "react";
+import CharacterContext from "../../lib/context";
+import Loader from "../Loader/Loader";
 
 function SpellsCounters() {
-    const [spellSlots, setSpellSlots] = useState(Array.from({ length: 9 }, () => 0));
-
+    const { spellSlots } = useContext(CharacterContext);
+    
+    if (spellSlots == null) {
+        return <Loader></Loader>;
+    }
 
     return(<div className="spells-counters">
         <div>Spell Slot Level</div>

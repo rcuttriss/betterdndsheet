@@ -1,8 +1,11 @@
+import "./SaveButton.css"
 import React, { useContext } from "react";
 import CharacterContext from "../../lib/context";
+import { updateCharFields } from "../../lib/fetchCharData";
+import { ReactComponent as FloppyDisk } from '../../assets/images/floppy-disk-regular.svg';
 
 function SaveButton() {
-  const { updateCharFields, changes } = useContext(CharacterContext);
+  const { changes } = useContext(CharacterContext);
 
   const handleSave = () => {
     // Assuming you have the changes you want to save in your context
@@ -10,7 +13,9 @@ function SaveButton() {
     updateCharFields(changes);
   };
 
-  return <button onClick={handleSave}>Save</button>;
+  return <button className="save-button" onClick={handleSave}>
+      <FloppyDisk></FloppyDisk>
+    </button>;
 }
 
 export default SaveButton;
