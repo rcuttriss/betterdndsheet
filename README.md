@@ -13,7 +13,7 @@
 [X] - generic spells
 [X] - set up reads for spells
 [X] - keep state for spell slots / casting spells
-[ ] - set up reads for inventory
+[X] - set up reads for inventory
 [ ] - set up writes for inventory
 [ ] - logic for Armor Class (need inventory set up first)
 [ ] - set up writes for statblocks
