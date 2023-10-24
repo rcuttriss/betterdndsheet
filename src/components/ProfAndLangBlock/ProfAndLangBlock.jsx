@@ -17,7 +17,7 @@ function ProfAndLangBlock() {
     <div className="prof-and-lang-block">
       <div className="prof-and-lang-block-item">
         <h3>Armor</h3>
-        <input
+        <textarea
           type="text"
           value={characterFields.armorStr}
           onChange={(e) => handleValueChange("armorStr", e.target.value)}
@@ -25,7 +25,7 @@ function ProfAndLangBlock() {
       </div>
       <div className="prof-and-lang-block-item">
         <h3>Weapons</h3>
-        <input
+        <textarea
           type="text"
           value={characterFields.weaponsStr}
           onChange={(e) => handleValueChange("weaponsStr", e.target.value)}
@@ -33,7 +33,7 @@ function ProfAndLangBlock() {
       </div>
       <div className="prof-and-lang-block-item">
         <h3>Tools</h3>
-        <input
+        <textarea
           type="text"
           value={characterFields.toolsStr}
           onChange={(e) => handleValueChange("toolsStr", e.target.value)}
@@ -41,7 +41,7 @@ function ProfAndLangBlock() {
       </div>
       <div className="prof-and-lang-block-item">
         <h3>Languages</h3>
-        <input
+        <textarea
           type="text"
           value={characterFields.langStr}
           onChange={(e) => handleValueChange("langStr", e.target.value)}

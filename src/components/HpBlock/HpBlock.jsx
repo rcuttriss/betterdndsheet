@@ -10,12 +10,14 @@ function HpBlock() {
       const newHp = characterFields.currHp + damageValue;
       setChanges(prevChanges => ({ ...prevChanges, currHp: newHp }));
       setCharacterFields({ ...characterFields, currHp: newHp });
+      setInputValue('');
     };
     const handleDamageClick = () => {
       const damageValue = parseInt(inputValue, 10) || 0; // Parse to integer, default to 0 if not a valid number
       const newHp = characterFields.currHp - damageValue;
       setChanges(prevChanges => ({ ...prevChanges, currHp: newHp }));
       setCharacterFields({ ...characterFields, currHp: newHp });
+      setInputValue('');
     };
   return (
     <div className="hp-block">

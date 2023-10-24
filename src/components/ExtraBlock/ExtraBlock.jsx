@@ -17,7 +17,7 @@ function ExtraBlock() {
     <div className="extra-block">
       <div className="extra-block-item">
         <h3>Defense</h3>
-        <input
+        <textarea
           type="text"
           value={characterFields.defenseStr}
           onChange={(e) => handleValueChange("defenseStr", e.target.value)}
@@ -25,7 +25,7 @@ function ExtraBlock() {
       </div>
       <div className="extra-block-item">
         <h3>Conditions</h3>
-        <input
+        <textarea
           type="text"
           value={characterFields.conditionsStr}
           onChange={(e) => handleValueChange("conditionsStr", e.target.value)}
