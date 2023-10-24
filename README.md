@@ -14,7 +14,8 @@
 [X] - set up reads for spells
 [X] - keep state for spell slots / casting spells
 [X] - set up reads for inventory
-[ ] - set up writes for inventory
+[X] - set up writes for inventory
+[ ] - set up edits for inventory
 [ ] - logic for Armor Class (need inventory set up first)
 [ ] - set up writes for statblocks
 [ ] - set up writes for spells

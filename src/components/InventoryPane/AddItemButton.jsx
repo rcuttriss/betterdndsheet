@@ -1,9 +1,11 @@
 import "./AddItemButton.css"
-import React, {useState} from "react";
+import React, {useState, useContext} from "react";
+import { updateInventory } from "../../lib/fetchCharData";
+import CharacterContext from "../../lib/context";
 
 function AddItemButton() {
+    const { setInventory } = useContext(CharacterContext);
     const [dialogOn, setDialogOn] = useState(false);
-    
     
     function closeModal() {
         setDialogOn(false);
@@ -11,10 +13,32 @@ function AddItemButton() {
     function openModal() {
         setDialogOn(true);
     }
-    function confirmNewItem() {
+    function confirmNewItem(event) {
+        event.preventDefault();
+        
+        const name = document.getElementById("productName").value;
+        const desc = document.getElementById("productDesc").value;
+        const qty = document.getElementById("productQty").value;
+        const category = document.getElementById("productCategory").value;
+        
+        try {
+            updateInventory(name, desc, qty, category);
+        } catch {
+            return;
+        }
 
+        setInventory((prevInventory) => ({
+            ...prevInventory,
+            name: {
+                description: desc,
+                quantity: qty,
+                category: category
+            }
+            }));
+        
+        closeModal();
     }
-
+      
     return(<>
         <div onClick={openModal} className="add-item-button">
             <span>Add Item</span>

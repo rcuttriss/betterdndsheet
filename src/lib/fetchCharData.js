@@ -6,6 +6,7 @@ import {
   collection,
   getDocs,
   setDoc,
+  addDoc,
 } from "firebase/firestore";
 
 const fetchSpellData = async (characterFields) => {
@@ -96,6 +97,31 @@ const fetchInventory = async () => {
   }
 };
 
-// TODO updateInventory
+const updateInventory = async (name, desc, qty, category) => {
+  try {
+    const inventoryRef = collection(
+      db,
+      "users",
+      "fKKVOyUGWteiKwfRqZ08DkaTLvS2",
+      "characters",
+      "WMrO6zkW6Y4eVFf5lF6i",
+      "inventory"
+    );
+    await setDoc(doc(inventoryRef, name), {
+      description: desc,
+      quantity: qty,
+      category: category,
+    });
+    console.log("Item added successfully!");
+  } catch (error) {
+    console.error("Error updating character inventory:", error);
+  }
+};
 
-export { fetchCharFields, updateCharFields, fetchSpellData, fetchInventory };
+export {
+  fetchCharFields,
+  updateCharFields,
+  fetchSpellData,
+  fetchInventory,
+  updateInventory,
+};
