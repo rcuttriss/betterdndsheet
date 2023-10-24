@@ -15,7 +15,7 @@ import { ReactComponent as TransmutationIcon } from '../../assets/images/transmu
 
 
 const SpellsPane = () => {
-  const { spellData, setSpellSlots } = useContext(CharacterContext);
+  const { spellData, setSpellSlots, setChanges } = useContext(CharacterContext);
 
   if (!spellData) {
     return <Loader></Loader>;
@@ -49,7 +49,7 @@ const SpellsPane = () => {
       const updatedSpellSlots = [...prevSpellSlots];
       if(updatedSpellSlots[level-1] > 0) {
         updatedSpellSlots[level-1] = updatedSpellSlots[level-1]-1;
-      }
+        setChanges(prevChanges => ({ ...prevChanges, spellSlots:updatedSpellSlots }));      }
       return updatedSpellSlots;
     });
   };

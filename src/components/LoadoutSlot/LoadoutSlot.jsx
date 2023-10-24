@@ -1,7 +1,7 @@
-import "./InventorySlot.css";
-import InventorySlotModal from "./InventorySlotModal.jsx";
+import "./LoadoutSlot.css";
+import InventorySlotModal from "./LoadoutSlotModal.jsx";
 
-const InventorySlot = ({ slot, openModalSlot, setOpenModalSlot, gearData }) => {
+const LoadoutSlot = ({ slot, openModalSlot, setOpenModalSlot, gearData }) => {
   const openWindow = () => {
     setOpenModalSlot(slot); // Notify the App component about the clicked slot
   };
@@ -30,4 +30,4 @@ const InventorySlot = ({ slot, openModalSlot, setOpenModalSlot, gearData }) => {
   );
 };
 
-export default InventorySlot;
+export default LoadoutSlot;

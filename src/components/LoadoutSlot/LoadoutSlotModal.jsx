@@ -1,6 +1,6 @@
-import "./InventorySlotModal.css";
+import "./LoadoutSlotModal.css";
 
-const InventorySlotModal = ({ closeModal, gearData, openModalSlot }) => {
+const LoadoutSlotModal = ({ closeModal, gearData, openModalSlot }) => {
   return (
     <div className={`inv-slot-modal ${openModalSlot ? "modal-pop-up" : ""}`}>
       <button className="close-modal-button" onClick={closeModal}>
@@ -22,4 +22,4 @@ const InventorySlotModal = ({ closeModal, gearData, openModalSlot }) => {
   );
 };
 
-export default InventorySlotModal;
+export default LoadoutSlotModal;

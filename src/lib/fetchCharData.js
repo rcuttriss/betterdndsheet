@@ -74,33 +74,28 @@ const updateCharFields = async (changes) => {
     });
 };
 
-const fetchCharAttr = async () => {
+const fetchInventory = async () => {
   try {
-    const charAttrRef = collection(
+    const inventoryRef = collection(
       db,
       "users",
       "fKKVOyUGWteiKwfRqZ08DkaTLvS2",
       "characters",
       "WMrO6zkW6Y4eVFf5lF6i",
-      "attributes"
+      "inventory"
     );
-    console.log("Querying Character Attributes...");
-    const attrSnapshot = await getDocs(charAttrRef);
-    console.log("Success!");
-    let attrMap = {};
-    attrSnapshot.forEach((doc) => {
-      attrMap[doc.id] = doc.data()["value"];
+    const invSnapshot = await getDocs(inventoryRef);
+    let invMap = {};
+    invSnapshot.forEach((doc) => {
+      invMap[doc.id] = doc.data();
     });
 
-    if (!attrSnapshot.empty) {
-      //   console.log("Document data:", docSnapshot.data());
-      return attrMap;
-    } else {
-      console.log("No such document!");
-    }
+    return invMap;
   } catch (error) {
-    console.error("Error fetching char data:", error);
+    console.error("Error fetching character inventory:", error);
   }
 };
 
-export { fetchCharFields, fetchCharAttr, updateCharFields, fetchSpellData };
+// TODO updateInventory
+
+export { fetchCharFields, updateCharFields, fetchSpellData, fetchInventory };
