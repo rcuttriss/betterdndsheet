@@ -29,8 +29,8 @@ function AddItemButton() {
 
         setInventory((prevInventory) => ({
             ...prevInventory,
-            name: {
-                description: desc,
+            [name]: {
+                desc: desc,
                 quantity: qty,
                 category: category
             }

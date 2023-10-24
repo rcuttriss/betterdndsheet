@@ -6,11 +6,18 @@
 
 .inv-row, .inv-row-header {
     display: grid;
-    grid-template-columns: 1fr 1fr 2rem 1fr;
+    grid-template-columns: 1fr 1fr 2rem 1fr .5rem;
     gap: 16px; 
     padding: 1rem;
 }
 .inv-row-header {
     font-weight: bold;
     padding: .5rem;
+}
+
+.removeButton {
+    display: none;
+}
+.inv-row:hover .removeButton {
+    display: block;
 }

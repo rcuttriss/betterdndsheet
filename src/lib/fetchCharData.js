@@ -6,7 +6,7 @@ import {
   collection,
   getDocs,
   setDoc,
-  addDoc,
+  deleteDoc,
 } from "firebase/firestore";
 
 const fetchSpellData = async (characterFields) => {
@@ -118,10 +118,28 @@ const updateInventory = async (name, desc, qty, category) => {
   }
 };
 
+const deleteInventoryDoc = async (name) => {
+  try {
+    const inventoryRef = collection(
+      db,
+      "users",
+      "fKKVOyUGWteiKwfRqZ08DkaTLvS2",
+      "characters",
+      "WMrO6zkW6Y4eVFf5lF6i",
+      "inventory"
+    );
+    await deleteDoc(doc(inventoryRef, name));
+    console.log("Item deleted successfully!");
+  } catch (error) {
+    console.error("Error deleting inventory item:", error);
+  }
+};
+
 export {
   fetchCharFields,
   updateCharFields,
   fetchSpellData,
   fetchInventory,
   updateInventory,
+  deleteInventoryDoc,
 };
