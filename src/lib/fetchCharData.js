@@ -54,7 +54,7 @@ const fetchCharFields = async () => {
 };
 
 const updateCharFields = async (changes) => {
-  if (changes == null) {
+  if (changes == null || changes == {}) {
     return;
   }
 

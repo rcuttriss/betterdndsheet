@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./App.css";
 // components
 import {
@@ -24,17 +24,25 @@ import {
   fetchCharFields,
   fetchSpellData,
   fetchInventory,
+  updateCharFields,
 } from "./lib/fetchCharData";
 
 function App() {
   const [activePane, setActivePane] = useState(1);
   const [characterFields, setCharacterFields] = useState(null);
   const [spellData, setSpellData] = useState(null);
-  const [changes, setChanges] = useState(null);
+  const [changes, setChanges] = useState({});
   const [spellSlots, setSpellSlots] = useState(null);
   const [inventory, setInventory] = useState(null);
 
+  const changesRef = useRef(changes);
+
   useEffect(() => {
+    changesRef.current = changes;
+  }, [changes]);
+
+  useEffect(() => {
+    // fetch data from firestore and update local states
     const fetchData = async () => {
       try {
         const [tempCharFields, tempInventory] = await Promise.all([
@@ -51,6 +59,24 @@ function App() {
     };
 
     fetchData();
+
+    // Setting up the auto-save interval
+    const autoSaveInterval = setInterval(() => {
+      const currentChanges = changesRef.current;
+
+      if (Object.keys(currentChanges).length > 0) {
+        updateCharFields(currentChanges)
+          .then(() => {
+            console.log("Auto-save successful");
+            setChanges({}); // Clear the changes after saving
+          })
+          .catch((error) => {
+            console.error("Auto-save failed:", error);
+          });
+      }
+    }, 10000); // 10 seconds interval
+
+    return () => clearInterval(autoSaveInterval);
   }, []);
 
   const handleTabClick = (index) => {
@@ -77,7 +103,6 @@ function App() {
     >
       <div className="App">
         <SignInButton />
-        <SaveButton></SaveButton>
         <div className="info-block">
           <div className="stat-block">
             <StatBlockGrid></StatBlockGrid>
