@@ -64,9 +64,3 @@
     padding: .5rem;
     align-self: flex-end;
 }
-.dialogOn-false {
-    display: none;
-}
-.dialogOn-true {
-    display: block;
-}

@@ -97,22 +97,45 @@ const fetchInventory = async () => {
   }
 };
 
-const updateInventory = async (name, desc, qty, category) => {
+const updateInventory = async (oldName, newName, desc, qty, category) => {
   try {
-    const inventoryRef = collection(
+    const inventoryRef = doc(
       db,
       "users",
       "fKKVOyUGWteiKwfRqZ08DkaTLvS2",
       "characters",
       "WMrO6zkW6Y4eVFf5lF6i",
-      "inventory"
+      "inventory",
+      oldName
     );
-    await setDoc(doc(inventoryRef, name), {
-      description: desc,
-      quantity: qty,
-      category: category,
-    });
-    console.log("Item added successfully!");
+
+    if (oldName !== newName) {
+      // If the name has changed, delete the old document and create a new one
+      await deleteDoc(inventoryRef);
+      const newInventoryRef = doc(
+        db,
+        "users",
+        "fKKVOyUGWteiKwfRqZ08DkaTLvS2",
+        "characters",
+        "WMrO6zkW6Y4eVFf5lF6i",
+        "inventory",
+        newName
+      );
+      await setDoc(newInventoryRef, {
+        description: desc,
+        quantity: qty,
+        category: category,
+      });
+      console.log("Item updated and new document created successfully!");
+    } else {
+      // If the name has not changed, update the existing document
+      await updateDoc(inventoryRef, {
+        description: desc,
+        quantity: qty,
+        category: category,
+      });
+      console.log("Item updated successfully!");
+    }
   } catch (error) {
     console.error("Error updating character inventory:", error);
   }

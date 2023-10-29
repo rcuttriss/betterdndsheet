@@ -18,7 +18,7 @@
 [X] - set up reads for features/traits
 [X] - set up deletes for inventory
 [X] - autosave
-[ ] - set up edits for inventory
+[X] - set up edits for inventory
 [ ] - logic for Armor Class (need inventory set up first)
 [ ] - set up writes for statblocks
 [ ] - set up writes for spells

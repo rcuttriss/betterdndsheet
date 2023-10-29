@@ -6,7 +6,7 @@
 
 .inv-row, .inv-row-header {
     display: grid;
-    grid-template-columns: 1fr 1fr 2rem 1fr .5rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     gap: 16px; 
     padding: 1rem;
 }
@@ -15,9 +15,9 @@
     padding: .5rem;
 }
 
-.removeButton {
+.editButton, .removeButton {
     display: none;
 }
-.inv-row:hover .removeButton {
+.inv-row:hover .editButton, .inv-row:hover .removeButton {
     display: block;
 }
