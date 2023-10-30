@@ -1,13 +1,26 @@
 import "./FeaturesPane.css"
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import CharacterContext from "../../lib/context";
 import AddFeatureButton from "./AddFeatureButton";
+import FeatureModal from "./FeatureModal";
 
 function FeaturesPane() {
     const { characterFields, setCharacterFields, setChanges } = useContext(CharacterContext);
     const classFeatures = characterFields.classFeatures;
     const raceFeatures = characterFields.raceFeatures;
     const feats = characterFields.feats;
+    const [editDialogOn, setEditDialogOn] = useState(false);
+    const [modalInfo, setModalInfo] = useState({});
+
+    function toggleModal(name,desc,category) {
+        setEditDialogOn((prev) => !prev);
+        setModalInfo({
+            oldName: name,
+            name: name,
+            desc: desc,
+            category: category
+        })
+    }
 
     function removeFeature( name, category ) {
         let newCharFields;
@@ -37,6 +50,8 @@ function FeaturesPane() {
                         <div key={key} className="feature">
                             <div className="feature-name">{key}</div>
                             <div className="feature-desc">{classFeatures[key]}</div>
+                            <span onClick={() => toggleModal(key,classFeatures[key],"classFeatures")}>Edit</span>
+                            <span onClick={() => removeFeature(key,"classFeatures")}>X</span>
                         </div>
                     ))}
                 </div>
@@ -48,7 +63,7 @@ function FeaturesPane() {
                         <div key={key} className="feature">
                             <div className="feature-name">{key}</div>
                             <div className="feature-desc">{raceFeatures[key]}</div>
-                            <span>Edit</span>
+                            <span onClick={() => toggleModal(key,raceFeatures[key],"raceFeatures")}>Edit</span>
                             <span onClick={() => removeFeature(key,"raceFeatures")}>X</span>
                         </div>
                     ))}
@@ -61,11 +76,14 @@ function FeaturesPane() {
                         <div key={key} className="feature">
                             <div className="feature-name">{key}</div>
                             <div className="feature-desc">{feats[key]}</div>
+                            <span onClick={() => toggleModal(key,feats[key],"feats")}>Edit</span>
+                            <span onClick={() => removeFeature(key,"feats")}>X</span>
                         </div>
                     ))}
                 </div>
             ) : null}
             <AddFeatureButton></AddFeatureButton>
+            {editDialogOn && <FeatureModal modalInfo={modalInfo} toggleModal={toggleModal} />}
         </div>
     );
 }

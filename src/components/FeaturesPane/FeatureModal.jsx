@@ -15,23 +15,31 @@ function FeatureModal ({modalInfo, toggleModal}) {
 
   const confirmFeature = (event) => {
     event.preventDefault();  // Prevent form from submitting the traditional way
-    setChanges((prevChanges) => ({
-      ...prevChanges,
-      [localModalInfo.category]: {
-        ...prevChanges[localModalInfo.category],
-        [localModalInfo.name]: localModalInfo.desc,
-      },
-    }));
+    
+    const { oldName, name, desc, category } = localModalInfo;
 
-    setCharacterFields((prevCharacterFields) => ({
-        ...prevCharacterFields,
-        [localModalInfo.category]: {
-          ...prevCharacterFields[localModalInfo.category],
-          [localModalInfo.name]: localModalInfo.desc,
-        },
-      }))
+    setChanges((prevChanges) => {
+        const newChanges = { ...prevChanges };
+        if (!newChanges[category]) {
+          newChanges[category] = {};
+        }
+        if (oldName !== name) {
+          delete newChanges[category][oldName];
+        }
+        newChanges[category][name] = desc;
+        return newChanges;
+      });
 
-    toggleModal();  // Close the modal after confirming
+    setCharacterFields((prevCharacterFields) => {
+        const newCharacterFields = { ...prevCharacterFields };
+        if (oldName !== name) {
+          delete newCharacterFields[category][oldName];
+        }
+        newCharacterFields[category][name] = desc;
+        return newCharacterFields;
+      });
+
+    toggleModal();
   };
 
   return (

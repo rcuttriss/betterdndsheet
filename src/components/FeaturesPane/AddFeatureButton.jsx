@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import AddFeatureModal from "./FeatureModal";
+import FeatureModal from "./FeatureModal";
 
 function AddFeatureButton() {
     const [featureDialogOn, setFeatureDialogOn] = useState(false);
@@ -16,7 +16,7 @@ function AddFeatureButton() {
 
     return(<>
         <div className="add-feature-button" onClick={toggleModal}>Add Feature</div>
-        {featureDialogOn && <AddFeatureModal modalInfo={modalInfo} toggleModal={toggleModal}></AddFeatureModal>}
+        {featureDialogOn && <FeatureModal modalInfo={modalInfo} toggleModal={toggleModal}></FeatureModal>}
     </>
     ) 
 }
