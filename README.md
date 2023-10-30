@@ -23,7 +23,8 @@
 [ ] - set up writes for statblocks
 [ ] - set up writes for spells
 [ ] - set up reads/writes for actions (need inventory set up first)
-[ ] - set up writes for features/traits
+[X] - set up writes for features/traits
+[ ] - set up edits for features/traits
 [ ] - set up create a character
 [ ] - set up select a character
 [ ] - character level ups (all classes)

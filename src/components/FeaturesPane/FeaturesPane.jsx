@@ -1,6 +1,7 @@
 import "./FeaturesPane.css"
 import { useContext } from "react";
 import CharacterContext from "../../lib/context";
+import AddFeatureButton from "./AddFeatureButton";
 
 function FeaturesPane() {
     const { characterFields } = useContext(CharacterContext);
@@ -43,6 +44,7 @@ function FeaturesPane() {
                     ))}
                 </div>
             ) : null}
+            <AddFeatureButton></AddFeatureButton>
         </div>
     );
 }

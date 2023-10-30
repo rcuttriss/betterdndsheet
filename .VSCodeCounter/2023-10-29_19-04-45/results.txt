@@ -1,0 +1,128 @@
+Date : 2023-10-29 19:04:45
+Directory : c:\Users\monke\Desktop\CS\dndhelper
+Total : 72 files,  45339 codes, 19 comments, 221 blanks, all 45579 lines
+
+Languages
++----------------+------------+------------+------------+------------+------------+
+| language       | files      | code       | comment    | blank      | total      |
++----------------+------------+------------+------------+------------+------------+
+| JSON           |          9 |     43,302 |          0 |          8 |     43,310 |
+| JavaScript JSX |         24 |        923 |          7 |        119 |      1,049 |
+| CSS            |         20 |        666 |          0 |         49 |        715 |
+| JavaScript     |          7 |        342 |         10 |         42 |        394 |
+| SVG            |         10 |         59 |          2 |          0 |         61 |
+| Markdown       |          1 |         29 |          0 |          2 |         31 |
+| HTML           |          1 |         18 |          0 |          1 |         19 |
++----------------+------------+------------+------------+------------+------------+
+
+Directories
++------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                     | files      | code       | comment    | blank      | total      |
++------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                        |         72 |     45,339 |         19 |        221 |     45,579 |
+| . (Files)                                                                                |          3 |     31,668 |          0 |          4 |     31,672 |
+| public                                                                                   |          2 |         43 |          0 |          2 |         45 |
+| src                                                                                      |         67 |     13,628 |         19 |        215 |     13,862 |
+| src (Files)                                                                              |          4 |        236 |          4 |         26 |        266 |
+| src\assets                                                                               |         10 |         59 |          2 |          0 |         61 |
+| src\assets\images                                                                        |         10 |         59 |          2 |          0 |         61 |
+| src\components                                                                           |         43 |      1,512 |          8 |        159 |      1,679 |
+| src\components (Files)                                                                   |          1 |         15 |          1 |          2 |         18 |
+| src\components\ActionsPane                                                               |          2 |        115 |          0 |          7 |        122 |
+| src\components\ExtraBlock                                                                |          2 |         63 |          0 |          7 |         70 |
+| src\components\FeaturesPane                                                              |          4 |        186 |          0 |         17 |        203 |
+| src\components\HpBlock                                                                   |          2 |         74 |          0 |          3 |         77 |
+| src\components\InventoryPane                                                             |          5 |        222 |          0 |         28 |        250 |
+| src\components\Loader                                                                    |          2 |         46 |          0 |          2 |         48 |
+| src\components\LoadoutPane                                                               |          2 |         69 |          0 |          4 |         73 |
+| src\components\LoadoutSlot                                                               |          4 |        118 |          2 |         13 |        133 |
+| src\components\ProfAndLangBlock                                                          |          2 |         88 |          0 |          9 |         97 |
+| src\components\SaveButton                                                                |          2 |         19 |          2 |          5 |         26 |
+| src\components\SavingThrowsBlock                                                         |          3 |         72 |          0 |         12 |         84 |
+| src\components\SignInButton                                                              |          2 |         33 |          2 |          5 |         40 |
+| src\components\SkillsBlock                                                               |          2 |        101 |          0 |          7 |        108 |
+| src\components\SpellsPane                                                                |          3 |        158 |          1 |         18 |        177 |
+| src\components\StatBlock                                                                 |          3 |         66 |          0 |         11 |         77 |
+| src\components\UniversalBlock                                                            |          2 |         67 |          0 |          9 |         76 |
+| src\data                                                                                 |          6 |     11,638 |          0 |          5 |     11,643 |
+| src\lib                                                                                  |          4 |        183 |          5 |         25 |        213 |
++------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++------------------------------------------------------------------------------------------+----------------+------------+------------+------------+------------+
+| filename                                                                                 | language       | code       | comment    | blank      | total      |
++------------------------------------------------------------------------------------------+----------------+------------+------------+------------+------------+
+| c:\Users\monke\Desktop\CS\dndhelper\README.md                                            | Markdown       |         29 |          0 |          2 |         31 |
+| c:\Users\monke\Desktop\CS\dndhelper\package-lock.json                                    | JSON           |     31,593 |          0 |          1 |     31,594 |
+| c:\Users\monke\Desktop\CS\dndhelper\package.json                                         | JSON           |         46 |          0 |          1 |         47 |
+| c:\Users\monke\Desktop\CS\dndhelper\public\index.html                                    | HTML           |         18 |          0 |          1 |         19 |
+| c:\Users\monke\Desktop\CS\dndhelper\public\manifest.json                                 | JSON           |         25 |          0 |          1 |         26 |
+| c:\Users\monke\Desktop\CS\dndhelper\src\App.css                                          | CSS            |         80 |          0 |          9 |         89 |
+| c:\Users\monke\Desktop\CS\dndhelper\src\App.js                                           | JavaScript     |        138 |          4 |         13 |        155 |
+| c:\Users\monke\Desktop\CS\dndhelper\src\assets\images\abjuration.svg                     | SVG            |          6 |          0 |          0 |          6 |
+| c:\Users\monke\Desktop\CS\dndhelper\src\assets\images\conjuration.svg                    | SVG            |          6 |          0 |          0 |          6 |
+| c:\Users\monke\Desktop\CS\dndhelper\src\assets\images\divination.svg                     | SVG            |          6 |          0 |          0 |          6 |
+| c:\Users\monke\Desktop\CS\dndhelper\src\assets\images\enchantment.svg                    | SVG            |          6 |          0 |          0 |          6 |
+| c:\Users\monke\Desktop\CS\dndhelper\src\assets\images\evocation.svg                      | SVG            |          6 |          0 |          0 |          6 |
+| c:\Users\monke\Desktop\CS\dndhelper\src\assets\images\floppy-disk-regular.svg            | SVG            |          5 |          1 |          0 |          6 |
+| c:\Users\monke\Desktop\CS\dndhelper\src\assets\images\google.svg                         | SVG            |          5 |          1 |          0 |          6 |
+| c:\Users\monke\Desktop\CS\dndhelper\src\assets\images\illusion.svg                       | SVG            |          6 |          0 |          0 |          6 |
+| c:\Users\monke\Desktop\CS\dndhelper\src\assets\images\necromancy.svg                     | SVG            |          7 |          0 |          0 |          7 |
+| c:\Users\monke\Desktop\CS\dndhelper\src\assets\images\transmutation.svg                  | SVG            |          6 |          0 |          0 |          6 |
+| c:\Users\monke\Desktop\CS\dndhelper\src\components\ActionsPane\ActionsPane.css           | CSS            |         42 |          0 |          5 |         47 |
+| c:\Users\monke\Desktop\CS\dndhelper\src\components\ActionsPane\ActionsPane.jsx           | JavaScript JSX |         73 |          0 |          2 |         75 |
+| c:\Users\monke\Desktop\CS\dndhelper\src\components\Barrel.js                             | JavaScript     |         15 |          1 |          2 |         18 |
+| c:\Users\monke\Desktop\CS\dndhelper\src\components\ExtraBlock\ExtraBlock.css             | CSS            |         29 |          0 |          2 |         31 |
+| c:\Users\monke\Desktop\CS\dndhelper\src\components\ExtraBlock\ExtraBlock.jsx             | JavaScript JSX |         34 |          0 |          5 |         39 |
+| c:\Users\monke\Desktop\CS\dndhelper\src\components\FeaturesPane\AddFeatureButton.jsx     | JavaScript JSX |         19 |          0 |          5 |         24 |
+| c:\Users\monke\Desktop\CS\dndhelper\src\components\FeaturesPane\FeatureModal.jsx         | JavaScript JSX |         57 |          0 |          8 |         65 |
+| c:\Users\monke\Desktop\CS\dndhelper\src\components\FeaturesPane\FeaturesPane.css         | CSS            |         61 |          0 |          0 |         61 |
+| c:\Users\monke\Desktop\CS\dndhelper\src\components\FeaturesPane\FeaturesPane.jsx         | JavaScript JSX |         49 |          0 |          4 |         53 |
+| c:\Users\monke\Desktop\CS\dndhelper\src\components\HpBlock\HpBlock.css                   | CSS            |         42 |          0 |          0 |         42 |
+| c:\Users\monke\Desktop\CS\dndhelper\src\components\HpBlock\HpBlock.jsx                   | JavaScript JSX |         32 |          0 |          3 |         35 |
+| c:\Users\monke\Desktop\CS\dndhelper\src\components\InventoryPane\AddItemButton.css       | CSS            |         61 |          0 |          5 |         66 |
+| c:\Users\monke\Desktop\CS\dndhelper\src\components\InventoryPane\AddItemButton.jsx       | JavaScript JSX |         24 |          0 |          5 |         29 |
+| c:\Users\monke\Desktop\CS\dndhelper\src\components\InventoryPane\InventoryPane.css       | CSS            |         21 |          0 |          2 |         23 |
+| c:\Users\monke\Desktop\CS\dndhelper\src\components\InventoryPane\InventoryPane.jsx       | JavaScript JSX |         52 |          0 |          6 |         58 |
+| c:\Users\monke\Desktop\CS\dndhelper\src\components\InventoryPane\ItemModal.jsx           | JavaScript JSX |         64 |          0 |         10 |         74 |
+| c:\Users\monke\Desktop\CS\dndhelper\src\components\Loader\Loader.css                     | CSS            |         33 |          0 |          0 |         33 |
+| c:\Users\monke\Desktop\CS\dndhelper\src\components\Loader\Loader.jsx                     | JavaScript JSX |         13 |          0 |          2 |         15 |
+| c:\Users\monke\Desktop\CS\dndhelper\src\components\LoadoutPane\LoadoutPane.css           | CSS            |          5 |          0 |          0 |          5 |
+| c:\Users\monke\Desktop\CS\dndhelper\src\components\LoadoutPane\LoadoutPane.jsx           | JavaScript JSX |         64 |          0 |          4 |         68 |
+| c:\Users\monke\Desktop\CS\dndhelper\src\components\LoadoutSlot\LoadoutSlot.css           | CSS            |         15 |          0 |          2 |         17 |
+| c:\Users\monke\Desktop\CS\dndhelper\src\components\LoadoutSlot\LoadoutSlot.jsx           | JavaScript JSX |         28 |          1 |          5 |         34 |
+| c:\Users\monke\Desktop\CS\dndhelper\src\components\LoadoutSlot\LoadoutSlotModal.css      | CSS            |         53 |          0 |          3 |         56 |
+| c:\Users\monke\Desktop\CS\dndhelper\src\components\LoadoutSlot\LoadoutSlotModal.jsx      | JavaScript JSX |         22 |          1 |          3 |         26 |
+| c:\Users\monke\Desktop\CS\dndhelper\src\components\ProfAndLangBlock\ProfAndLangBlock.css | CSS            |         38 |          0 |          4 |         42 |
+| c:\Users\monke\Desktop\CS\dndhelper\src\components\ProfAndLangBlock\ProfAndLangBlock.jsx | JavaScript JSX |         50 |          0 |          5 |         55 |
+| c:\Users\monke\Desktop\CS\dndhelper\src\components\SaveButton\SaveButton.css             | CSS            |          4 |          0 |          0 |          4 |
+| c:\Users\monke\Desktop\CS\dndhelper\src\components\SaveButton\SaveButton.jsx             | JavaScript JSX |         15 |          2 |          5 |         22 |
+| c:\Users\monke\Desktop\CS\dndhelper\src\components\SavingThrowsBlock\SavingThrow.jsx     | JavaScript JSX |         26 |          0 |          4 |         30 |
+| c:\Users\monke\Desktop\CS\dndhelper\src\components\SavingThrowsBlock\SavingThrowGrid.jsx | JavaScript JSX |         20 |          0 |          4 |         24 |
+| c:\Users\monke\Desktop\CS\dndhelper\src\components\SavingThrowsBlock\SavingThrows.css    | CSS            |         26 |          0 |          4 |         30 |
+| c:\Users\monke\Desktop\CS\dndhelper\src\components\SignInButton\SignInButton.css         | CSS            |          4 |          0 |          0 |          4 |
+| c:\Users\monke\Desktop\CS\dndhelper\src\components\SignInButton\SignInButton.jsx         | JavaScript JSX |         29 |          2 |          5 |         36 |
+| c:\Users\monke\Desktop\CS\dndhelper\src\components\SkillsBlock\SkillsBlock.css           | CSS            |         28 |          0 |          2 |         30 |
+| c:\Users\monke\Desktop\CS\dndhelper\src\components\SkillsBlock\SkillsBlock.jsx           | JavaScript JSX |         73 |          0 |          5 |         78 |
+| c:\Users\monke\Desktop\CS\dndhelper\src\components\SpellsPane\SpellsCounters.jsx         | JavaScript JSX |         21 |          0 |          4 |         25 |
+| c:\Users\monke\Desktop\CS\dndhelper\src\components\SpellsPane\SpellsPane.css             | CSS            |         58 |          0 |          4 |         62 |
+| c:\Users\monke\Desktop\CS\dndhelper\src\components\SpellsPane\SpellsPane.jsx             | JavaScript JSX |         79 |          1 |         10 |         90 |
+| c:\Users\monke\Desktop\CS\dndhelper\src\components\StatBlock\StatBlock.css               | CSS            |         26 |          0 |          2 |         28 |
+| c:\Users\monke\Desktop\CS\dndhelper\src\components\StatBlock\StatBlock.jsx               | JavaScript JSX |         21 |          0 |          5 |         26 |
+| c:\Users\monke\Desktop\CS\dndhelper\src\components\StatBlock\StatBlockGrid.jsx           | JavaScript JSX |         19 |          0 |          4 |         23 |
+| c:\Users\monke\Desktop\CS\dndhelper\src\components\UniversalBlock\UniversalBlock.css     | CSS            |         28 |          0 |          3 |         31 |
+| c:\Users\monke\Desktop\CS\dndhelper\src\components\UniversalBlock\UniversalBlock.jsx     | JavaScript JSX |         39 |          0 |          6 |         45 |
+| c:\Users\monke\Desktop\CS\dndhelper\src\data\chest.json                                  | JSON           |         57 |          0 |          1 |         58 |
+| c:\Users\monke\Desktop\CS\dndhelper\src\data\feet.json                                   | JSON           |         57 |          0 |          1 |         58 |
+| c:\Users\monke\Desktop\CS\dndhelper\src\data\head.json                                   | JSON           |         57 |          0 |          1 |         58 |
+| c:\Users\monke\Desktop\CS\dndhelper\src\data\legs.json                                   | JSON           |         57 |          0 |          1 |         58 |
+| c:\Users\monke\Desktop\CS\dndhelper\src\data\shoulders.json                              | JSON           |         57 |          0 |          1 |         58 |
+| c:\Users\monke\Desktop\CS\dndhelper\src\data\spells.json                                 | JSON           |     11,353 |          0 |          0 |     11,353 |
+| c:\Users\monke\Desktop\CS\dndhelper\src\index.css                                        | CSS            |         12 |          0 |          2 |         14 |
+| c:\Users\monke\Desktop\CS\dndhelper\src\index.js                                         | JavaScript     |          6 |          0 |          2 |          8 |
+| c:\Users\monke\Desktop\CS\dndhelper\src\lib\context.js                                   | JavaScript     |          3 |          0 |          3 |          6 |
+| c:\Users\monke\Desktop\CS\dndhelper\src\lib\dataParse.js                                 | JavaScript     |          9 |          0 |          4 |         13 |
+| c:\Users\monke\Desktop\CS\dndhelper\src\lib\fetchCharData.js                             | JavaScript     |        152 |          3 |         14 |        169 |
+| c:\Users\monke\Desktop\CS\dndhelper\src\lib\firebase.js                                  | JavaScript     |         19 |          2 |          4 |         25 |
+| Total                                                                                    |                |     45,339 |         19 |        221 |     45,579 |
++------------------------------------------------------------------------------------------+----------------+------------+------------+------------+------------+
