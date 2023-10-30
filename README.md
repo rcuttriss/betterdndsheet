@@ -25,6 +25,7 @@
 [ ] - set up reads/writes for actions (need inventory set up first)
 [X] - set up writes for features/traits
 [ ] - set up edits for features/traits
+[X] - set up deletes for features/traits
 [ ] - set up create a character
 [ ] - set up select a character
 [ ] - character level ups (all classes)

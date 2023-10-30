@@ -4,10 +4,29 @@ import CharacterContext from "../../lib/context";
 import AddFeatureButton from "./AddFeatureButton";
 
 function FeaturesPane() {
-    const { characterFields } = useContext(CharacterContext);
+    const { characterFields, setCharacterFields, setChanges } = useContext(CharacterContext);
     const classFeatures = characterFields.classFeatures;
     const raceFeatures = characterFields.raceFeatures;
     const feats = characterFields.feats;
+
+    function removeFeature( name, category ) {
+        let newCharFields;
+        setCharacterFields((prevCharacterFields) => {
+            newCharFields = {...prevCharacterFields};
+            delete newCharFields[category][name];
+            return newCharFields;
+        });
+        setChanges((prevChanges) => {
+            let newChanges = {...prevChanges};
+            // Initialize the category in changes if it doesn't exist
+            if (!newChanges[category]) {
+                newChanges[category] = {};
+            }
+            // Add everything but the removed item
+            newChanges[category] = {...newCharFields[category]};
+            return newChanges;
+        });
+    }
 
     return (
         <div className="feature-pane">
@@ -29,6 +48,8 @@ function FeaturesPane() {
                         <div key={key} className="feature">
                             <div className="feature-name">{key}</div>
                             <div className="feature-desc">{raceFeatures[key]}</div>
+                            <span>Edit</span>
+                            <span onClick={() => removeFeature(key,"raceFeatures")}>X</span>
                         </div>
                     ))}
                 </div>
