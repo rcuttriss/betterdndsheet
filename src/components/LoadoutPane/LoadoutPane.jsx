@@ -21,7 +21,7 @@ function LoadoutPane() {
     <LoadoutSlot
       slot={"neck"}
       openModalSlot={openModalSlot}
-      setOpenModalSlot={setOpenModalSlot}
+      setOpenModalSlot={setOpenModalSlot} 
       gearData={shoulderGearData}
     />
     <LoadoutSlot

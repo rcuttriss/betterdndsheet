@@ -35,7 +35,7 @@ function UniversalBlock() {
         </div>
         <div className="ac-val">
           <img id="armorclass" src={armorImage} alt="Medal"></img>
-          <span>Armor Class: XX</span>
+          <span>{`Armor Class: ${characterFields.currAC}`}</span>
         </div>
       </div>
     );
