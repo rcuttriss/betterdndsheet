@@ -34,6 +34,8 @@ function App() {
   const [changes, setChanges] = useState({});
   const [spellSlots, setSpellSlots] = useState(null);
   const [inventory, setInventory] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   const changesRef = useRef(changes);
 
@@ -53,8 +55,11 @@ function App() {
         setCharacterFields(tempCharFields);
         setSpellSlots(tempCharFields.spellSlots);
         setInventory(tempInventory);
+        setLoading(false);
       } catch (error) {
         console.error("Error fetching character data:", error);
+        setError("Failed to fetch character data");
+        setLoading(false);
       }
     };
 
@@ -83,8 +88,12 @@ function App() {
     setActivePane(index);
   };
 
-  if (!characterFields) {
+  if (loading) {
     return <Loader></Loader>; // Or any loading indicator
+  }
+
+  if (error) {
+    return <div>Error: {error}</div>; // Display error message
   }
 
   return (
